@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## Open a pdf in zathura by finding its name using fzf:
+
+cd ~
+file=$(fzf)
+zathura $file & exit
+
