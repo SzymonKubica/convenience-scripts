@@ -1,0 +1,7 @@
+#/usr/bin/sh
+
+# This script launches bemenu to allow you to select a required man page
+# after that it uses zathura to show it a as a pdf.
+man -k . | bemenu -n -l 5 -b --ab '#09090998' --tb '#09090995' --tf '#bbbbbb' --fb '#09090995' --nb '#09090995' --nf '#bbbbbb' --hb '#af0000' --hf '#090909' -p '' -H 24 -fn 'JetBrains Mono Nerd Font 10' | awk '{print $1}' > a
+xargs -r man -Tpdf < a | zathura -
+rm a
