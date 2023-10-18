@@ -1,6 +1,8 @@
 #!/bin/bash
 
-## Open a pdf in zathura by finding its name using fzf:
+# Open a pdf in zathura by finding its name using fzf:
+# Important: if you want this program to close your current terminal after
+# launching zathura, source it so that exit at the end closes your shell.
 
 cd ~
 file=$(fzf)
