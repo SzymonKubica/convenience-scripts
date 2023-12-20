@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This script invokes the unstable google-chrome with the appropriate flags to
+# allow for hardware video decode
+
+google-chrome-unstable --enable-features=VaapiVideoDecodeLinuxGL --disable-features=Vulkan
